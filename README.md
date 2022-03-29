@@ -1,5 +1,6 @@
 # Docker-Compose-Lampstack
 Building Lampstack using Docker Compose
+
 1- create a machine and install docker on it
 
 I already had an Ubuntu machine that is "Docker" ready. You could easily follow up this link to easily install Docker on you machine
@@ -19,10 +20,10 @@ To install docker compose:
 
 Errors Faced Here: when trying to install Docker Compose this error showed: "Waiting for cache lock: Could not get lock /var/lib/dpkg/lock-frontend. It is held by process 3732"
 
-This error means that apt is now in use by other processed so let's check:
+This error means that apt is now in use by other processes so let's check:
 # ps aux | grep -i apt
 
-Either kill these processed or if you see the process "apt.systemd.daily update" just wait few minutes and try again. This is the daily auto update process you could know more about this error through this link 
+Either kill these processes or if you see the process "apt.systemd.daily update" just wait few minutes and try again. This is the daily auto update process you could know more about this error through this link 
 https://itsfoss.com/could-not-get-lock-error/
 
 3-create docker compose yaml file:
@@ -33,6 +34,7 @@ https://itsfoss.com/could-not-get-lock-error/
 
    3.2 List Services that we will use 
        So basically here we will need: db and apache. 
+       
    3.3 Mention Images
        I have used ready-made images for my services found on docker hub. (you could use any favorable version just edit the attribute)
 
